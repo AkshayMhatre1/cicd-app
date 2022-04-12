@@ -10,6 +10,7 @@ http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/htt
 	<flow name="cicd-demo-taskFlow" doc:id="82b0d953-b608-474c-926b-e6e94b140733" >
 		<http:listener doc:name="Listener" doc:id="ab3d1399-7730-4b6d-8ddb-de5eac7ad9d9" config-ref="HTTP_Listener_config" path="/test"/>
 		<set-payload value='#["CICD DEMO"]' doc:name="Set Payload" doc:id="81b27f84-5351-4144-9f52-e49a02fe579a" />
+		<set-variable value='#["demo"]' doc:name="Set Variable" doc:id="b7f61d6b-fb43-4026-b1b9-0fa52e6e63d7" variableName="demo"/>
 		<logger level="INFO" doc:name="Logger" doc:id="4cc7cee6-5923-4622-8810-22de6cf4b193" message="#[payload]"/>
 	</flow>
 </mule>
